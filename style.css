@@ -1,0 +1,184 @@
+/* CSS  Reset */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(22, 38, 56);
+}
+
+.toolbox-cont {
+  height: 5rem; /* rem -> root em   It is an Relative  unit of measurement based on the font size of root element ( <HTML> ) base font size is 16 px*/
+  background-color: #4b4b4b;
+  display: flex; /* If we want to show all its divs childs in same row then it must be flexible */
+  align-items: center;
+}
+
+/*  { .toolbox-cont > * } This is representing that all the direct childs of toolbox-cont will this effect    */
+.toolbox-cont > * {
+  margin-left: 4rem;
+}
+
+/* { .toolbox-priority-cont } */
+
+.toolbox-priority-cont {
+  height: 3.5rem;
+  width: 18rem;
+  background-color: #3d3d3d;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.toolbox-priority-cont > *:hover {
+  background-color: #485460;
+}
+
+.color {
+  height: 1.5rem;
+  width: 3rem;
+  border-radius: 0.4rem;
+}
+
+.lightpink {
+  background-color: lightpink;
+}
+.lightgreen {
+  background-color: lightgreen;
+}
+
+.lightblue {
+  background-color: lightblue;
+}
+
+.black {
+  background-color: black;
+}
+
+/*  { .action-btn-cont }  */
+
+.action-btn-cont {
+  height: 3.5rem;
+  width: 8rem;
+  background-color: #3d3d3d;
+  display: flex;
+}
+
+/*  { .action-btn-cont > * } This is representing that all the direct childs of action-btn-cont will this effect    */
+
+.action-btn-cont > * {
+  display: flex;
+  width: 50%;
+  font-size: 1.5rem;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+/* {.action-btn-cont > *:hover} */
+.add-btn:hover,
+.remove-btn:hover,
+.priority-color:hover {
+  background-color: #4bb543;
+  border-radius: 1rem;
+}
+
+/* Ticket CSS */
+
+.main-cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;         /* It will be between items */
+  padding: 2rem;     /* It will be for screen border items */
+  justify-content: center;
+}
+
+.ticket-cont{
+    height: 12rem;
+    width: 15rem;
+    background-color:  rgba(37, 59, 53, 0.39);
+    /* position: relative;   It is just used to fixed the lock at the bottom of this container at right side */
+    border-radius: 0.4rem;
+    border: #3d3d3d solid 2px;
+    overflow: auto;
+}
+
+.ticket-color{
+    height: 1rem;
+}
+
+.ticket-id{
+    background-color: rgb(64, 66, 61);
+    height: 2rem; 
+}
+
+
+/*  Flex Approach  */
+
+
+.ticket-lock{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 90px;
+    margin-right: 5px;
+    font-size: 1.5rem;
+}
+
+
+/* Position Approach   --> Relative To The Parent Element*/
+
+/* .ticket-lock{
+     position: absolute;
+     bottom: 5px;
+     right:5px;
+} */
+
+
+/* Popup container */
+
+.modal-cont{
+   height:50vh;       /*  50% height of Viewport  */
+   width:45vw;        /*  45% width  of Viewport  */
+   display: none;
+   position:absolute;
+   top:30%;
+   left:27%;
+}
+
+
+.textArea-cont{
+    height: 100%;
+    width: 75%;
+    resize: none;
+    outline: none;
+    border: none;
+    background-color: #dfe4ea;
+    font-size: 2rem;
+    color: black;
+    padding: 2rem;
+}
+
+
+.priority-colors-cont{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: #4b4b4b;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.priority-color{
+    height: 3rem;
+    width: 5rem;
+}  
+
+.active{
+  border: 5px solid lightsalmon;
+}
+
+    
